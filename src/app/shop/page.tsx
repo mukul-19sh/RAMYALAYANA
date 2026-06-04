@@ -496,7 +496,7 @@ export default function Shop() {
   return (
     <Suspense fallback={
       <div className="flex justify-center items-center min-h-[50vh] font-sans text-xs uppercase tracking-luxury select-none">
-        Loading RAMYA catalog...
+        Loading RAMYALAYANA catalog...
       </div>
     }>
       <ShopContent />

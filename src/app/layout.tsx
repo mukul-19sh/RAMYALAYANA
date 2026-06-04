@@ -4,16 +4,30 @@ import QueryProvider from "@/components/QueryProvider";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
-  title: "RAMYA — Modern Indian Silhouette & Sculptural Heritage",
+  title: "RAMYALAYANA — Modern Indian Silhouette & Sculptural Heritage",
   description: "Bespoke handloom garments, structured tailoring, and deconstructed silhouettes crafted from organic linens, khadi, and raw silks.",
   metadataBase: new URL("https://ramya-alayana.vercel.app"),
   openGraph: {
-    title: "RAMYA — Modern Indian Silhouette & Sculptural Heritage",
+    title: "RAMYALAYANA — Modern Indian Silhouette & Sculptural Heritage",
     description: "Bespoke handloom garments, structured tailoring, and deconstructed silhouettes crafted from organic linens, khadi, and raw silks.",
     url: "https://ramya-alayana.vercel.app",
-    siteName: "RAMYA",
+    siteName: "RAMYALAYANA",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1000,
+        height: 1000,
+        alt: "RAMYALAYANA official brand logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RAMYALAYANA — Modern Indian Silhouette & Sculptural Heritage",
+    description: "Bespoke handloom garments, structured tailoring, and deconstructed silhouettes crafted from organic linens, khadi, and raw silks.",
+    images: ["/logo.jpg"],
   },
 };
 

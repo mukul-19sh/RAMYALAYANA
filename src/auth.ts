@@ -54,7 +54,7 @@ const { handlers, auth: nextAuth, signIn, signOut } = NextAuth({
     Credentials({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "email", placeholder: "collector@ramya.in" },
+        email: { label: "Email", type: "email", placeholder: "collector@ramyalayana.in" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {

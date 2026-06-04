@@ -75,7 +75,7 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose }) => {
               { label: "Craft & Loom Coordinates", href: "/heritage" },
               { label: "Artisan Ledger", href: "/artisans" },
               { label: "Sizing Guidelines", href: "/size-guide" },
-              { label: "Collector Registry", href: "/dashboard" },
+              { label: "Collector Portal", href: "/dashboard" },
             ].map((link) => (
               <li key={link.label}>
                 <Link

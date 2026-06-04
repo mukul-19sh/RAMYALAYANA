@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("RAMYA Flagship — Product Detail Page Tests", () => {
+test.describe("RAMYALAYANA Flagship — Product Detail Page Tests", () => {
   // Use a local dev server address
   const baseUrl = "http://localhost:3000";
 

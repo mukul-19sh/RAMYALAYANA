@@ -306,16 +306,16 @@ export async function generateMetadata(
 
   if (!product) {
     return {
-      title: "Garment Not Found — RAMYA Flagship",
+      title: "Garment Not Found — RAMYALAYANA Flagship",
       description: "This item is not present in our digital archives.",
     };
   }
 
   return {
-    title: `${product.name} — RAMYA Flagship`,
+    title: `${product.name} — RAMYALAYANA Flagship`,
     description: product.description.editorial,
     openGraph: {
-      title: `${product.name} — RAMYA Flagship`,
+      title: `${product.name} — RAMYALAYANA Flagship`,
       description: product.description.editorial,
       url: `https://ramyalayana.com/product/${product.slug}`,
       type: "website",
@@ -330,7 +330,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} — RAMYA Flagship`,
+      title: `${product.name} — RAMYALAYANA Flagship`,
       description: product.description.editorial,
       images: [product.images.studioFront],
     },
@@ -383,7 +383,7 @@ export default async function ProductPage(
     "sku": product.sku,
     "brand": {
       "@type": "Brand",
-      "name": "RAMYA"
+      "name": "RAMYALAYANA"
     },
     "offers": {
       "@type": "Offer",

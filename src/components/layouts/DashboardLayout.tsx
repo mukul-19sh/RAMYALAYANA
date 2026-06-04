@@ -22,9 +22,9 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) =>
   return (
     <EditorialLayout width="wide">
       <div className="flex flex-col mb-8 select-none font-sans">
-        <h1 className="text-3xl font-serif text-text-primary mb-1 uppercase tracking-wide">COLLECTOR REGISTRY</h1>
+        <h1 className="text-3xl font-serif text-text-primary mb-1 uppercase tracking-wide">COLLECTOR DASHBOARD</h1>
         <p className="text-xs text-text-secondary font-light">
-          Manage shipping profiles, invite friends, and view Loom Club tiers.
+          Manage shipping profiles, invite friends, and view membership tiers.
         </p>
       </div>
 

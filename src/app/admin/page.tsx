@@ -145,7 +145,7 @@ export default function AdminDashboardPage() {
       <div className="min-h-screen bg-canvas-bg text-text-primary font-sans flex flex-col items-center justify-center p-8 select-none">
         <span className="text-xs tracking-luxury text-red-700 uppercase font-semibold mb-3">ACCESS FORBIDDEN</span>
         <p className="text-xs font-light text-text-secondary mb-6 text-center max-w-xs leading-relaxed">
-          You lack administrator privileges to access this repository registry.
+          You lack administrator privileges to access this console.
         </p>
         <Link href="/">
           <Button variant="primary">Return Home</Button>
@@ -159,8 +159,23 @@ export default function AdminDashboardPage() {
       {/* Header */}
       <header className="border-b border-border-subtle h-16 flex items-center justify-between px-4 md:px-8 select-none shrink-0 bg-canvas-bg">
         <div className="flex items-center gap-6">
-          <Link href="/" className="text-xl font-serif tracking-widest uppercase font-semibold text-text-primary">
-            RAMYA
+          <Link href="/" className="hover:opacity-80 transition-opacity flex items-center gap-2">
+            <Image
+              src="/icon.svg"
+              alt="RAMYALAYANA Icon"
+              width={25}
+              height={28}
+              priority
+              className="object-contain"
+            />
+            <Image
+              src="/wordmark.svg"
+              alt="RAMYALAYANA Wordmark"
+              width={99}
+              height={14}
+              priority
+              className="object-contain"
+            />
           </Link>
           <span className="text-[9px] uppercase tracking-luxury bg-border-primary text-canvas-bg px-2 py-0.5 font-bold">
             Atelier Console
@@ -277,7 +292,7 @@ export default function AdminDashboardPage() {
         {/* Order list & Status update forms */}
         <div className="border border-border-primary p-6 bg-canvas-bg">
           <h3 className="text-xs uppercase tracking-luxury font-semibold border-b border-border-subtle pb-2 text-text-primary mb-4">
-            Orders Registry Management
+            Orders Database Management
           </h3>
           {loadingOrders ? (
             <span className="text-xs text-text-secondary">Syncing order lists...</span>
@@ -352,7 +367,7 @@ export default function AdminDashboardPage() {
             <div className="bg-canvas-bg border border-border-primary max-w-md w-full p-6 shadow-glass animate-in fade-in zoom-in duration-200">
               <div className="flex justify-between items-baseline border-b border-border-subtle pb-3 mb-4">
                 <h4 className="text-xs uppercase tracking-luxury font-bold text-text-primary">
-                  Modify Registry Details
+                  Modify Order Details
                 </h4>
                 <button
                   onClick={() => setEditingOrderNo(null)}
@@ -423,7 +438,7 @@ export default function AdminDashboardPage() {
                     disabled={updatingOrderId !== null}
                     className="flex-1 text-xs uppercase"
                   >
-                    {updatingOrderId ? "Saving..." : "Save Registry"}
+                    {updatingOrderId ? "Saving..." : "Save Changes"}
                   </Button>
                   <Button
                     type="button"

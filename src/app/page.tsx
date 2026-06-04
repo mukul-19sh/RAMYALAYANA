@@ -156,7 +156,7 @@ export default function Home() {
         {slowNetwork ? (
           <Image
             src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1920"
-            alt="RAMYA Editorial Campaign"
+            alt="RAMYALAYANA Editorial Campaign"
             fill
             priority
             className="object-cover h-full w-full"
@@ -257,7 +257,7 @@ export default function Home() {
             OUR MANIFESTO
           </span>
           <p className="text-xl md:text-3xl font-serif text-text-primary tracking-wide leading-relaxed font-light mb-6">
-            "We reject the locked tagline. We reject the fast cycle. RAMYA is an editorial exploration of Indian drapes, structural forms, and slow craftsmanship."
+            "We reject the locked tagline. We reject the fast cycle. RAMYALAYANA is an editorial exploration of Indian drapes, structural forms, and slow craftsmanship."
           </p>
           <span className="h-0.5 w-12 bg-accent block" />
         </div>
@@ -303,7 +303,7 @@ export default function Home() {
           <div className="lg:col-span-7 relative aspect-[4/5] bg-canvas-inset-bg overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1200"
-              alt="RAMYA Lookbook Outfit drapes"
+              alt="RAMYALAYANA Lookbook Outfit drapes"
               fill
               className="object-cover"
             />
@@ -381,7 +381,7 @@ export default function Home() {
             Collector Reviews
           </h2>
           <p className="text-xs text-text-secondary font-light">
-            Read certified opinions from members of the Loom Club.
+            Read certified opinions from our collectors.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -418,22 +418,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. Newsletter Section */}
-      <section className="w-full py-16 px-4 border-t border-border-subtle bg-canvas-bg/50">
-        <div className="max-w-[1600px] mx-auto flex justify-center">
-          {/* Handled by global Newsletter form in footer, but added additional centered call */}
-          <div className="text-center max-w-md select-none font-sans">
-            <span className="text-[10px] tracking-widest uppercase font-medium text-text-secondary mb-2 block">THE REGISTRY</span>
-            <h4 className="text-lg font-serif tracking-wide mb-2 uppercase text-text-primary">Join the Loom Club</h4>
-            <p className="text-xs text-text-secondary font-light mb-6 leading-relaxed">
-              Register to receive seasonal campaigns, private collection lookbooks, and loyalty point milestones.
-            </p>
-            <Link href="/auth/login">
-              <Button variant="primary">Create Collector Account</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+
 
       {/* 10. Footer Section */}
       <Footer />

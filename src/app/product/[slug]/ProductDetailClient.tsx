@@ -571,7 +571,7 @@ export default function ProductDetailClient({
           )}
 
           <div className="mt-2 text-[10px] text-text-secondary leading-relaxed border-t border-border-subtle pt-3">
-            <strong>Disclaimer:</strong> RAMYA garments are individually hand-loomed and finished. Minor organic variations (1-2cm) in cut and drape are natural characteristics of hand-woven fabrics.
+            <strong>Disclaimer:</strong> RAMYALAYANA garments are individually hand-loomed and finished. Minor organic variations (1-2cm) in cut and drape are natural characteristics of hand-woven fabrics.
           </div>
         </form>
       </Modal>
@@ -580,7 +580,7 @@ export default function ProductDetailClient({
       <Modal isOpen={isSizeGuideOpen} onClose={() => setIsSizeGuideOpen(false)} title="Size Guide">
         <div className="flex flex-col gap-4 font-sans text-xs text-text-secondary">
           <p className="leading-relaxed">
-            RAMYA garments are designed with relaxed, architectural silhouettes. Find your measurement metrics below to confirm your size segment:
+            RAMYALAYANA garments are designed with relaxed, architectural silhouettes. Find your measurement metrics below to confirm your size segment:
           </p>
           <div className="w-full overflow-x-auto">
             <table className="w-full text-left border-collapse border border-border-subtle">

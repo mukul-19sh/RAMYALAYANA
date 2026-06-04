@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("RAMYA Flagship — Checkout & Order Journey E2E Tests", () => {
+test.describe("RAMYALAYANA Flagship — Checkout & Order Journey E2E Tests", () => {
   const baseUrl = "http://localhost:3000";
 
   test("1. Full Purchase Journey via COD (Guest Checkout)", async ({ page }) => {

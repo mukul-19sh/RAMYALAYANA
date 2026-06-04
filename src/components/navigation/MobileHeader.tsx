@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/store/useCart";
 import { SearchOverlay } from "./SearchOverlay";
 import { Drawer } from "../ui/Drawer";
@@ -30,12 +31,27 @@ export const MobileHeader: React.FC = () => {
         </button>
 
         {/* Center: Brand Logo */}
-        <div className="absolute left-1/2 -translate-x-1/2">
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
           <Link
             href="/"
-            className="text-lg font-serif tracking-widest text-text-primary uppercase font-semibold"
+            className="hover:opacity-80 transition-opacity flex items-center justify-center gap-2 select-none"
           >
-            RAMYA
+            <Image
+              src="/icon.svg"
+              alt="RAMYALAYANA Icon"
+              width={22}
+              height={24}
+              priority
+              className="object-contain"
+            />
+            <Image
+              src="/wordmark.svg"
+              alt="RAMYALAYANA Wordmark"
+              width={99}
+              height={14}
+              priority
+              className="object-contain"
+            />
           </Link>
         </div>
 
@@ -73,7 +89,26 @@ export const MobileHeader: React.FC = () => {
         isOpen={navDrawerOpen}
         onClose={() => setNavDrawerOpen(false)}
         position="left"
-        title="RAMYA"
+        title={
+          <div className="flex items-center gap-2 select-none">
+            <Image
+              src="/icon.svg"
+              alt="RAMYALAYANA Icon"
+              width={28}
+              height={31}
+              priority
+              className="object-contain"
+            />
+            <Image
+              src="/wordmark.svg"
+              alt="RAMYALAYANA Wordmark"
+              width={114}
+              height={16}
+              priority
+              className="object-contain"
+            />
+          </div>
+        }
       >
         <nav className="flex flex-col gap-6 py-4 uppercase font-sans tracking-luxury text-sm">
           <Link href="/shop" onClick={() => setNavDrawerOpen(false)} className="hover:text-accent">

@@ -98,7 +98,7 @@ function OrdersContent() {
       const res = await fetch(`/api/orders/${orderNo}?email=${encodeURIComponent(contactEmail)}`);
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data.error || "Failed to locate order registry.");
+        throw new Error(data.error || "Failed to locate order details.");
       }
       setSelectedOrder(data.order);
     } catch (err: any) {
@@ -252,7 +252,7 @@ function OrdersContent() {
         {loadingDetail ? (
           <div className="w-full h-64 flex items-center justify-center">
             <span className="text-xs uppercase tracking-luxury text-text-secondary animate-pulse">
-              Locating Registry details...
+              Locating order details...
             </span>
           </div>
         ) : selectedOrder ? (
@@ -261,7 +261,7 @@ function OrdersContent() {
             <div className="border-b border-border-subtle pb-4 flex flex-col md:flex-row justify-between gap-4 select-none">
               <div>
                 <span className="text-[10px] tracking-luxury uppercase font-medium text-text-secondary mb-1 block">
-                  ORDER STATUS REGISTRY
+                  ORDER STATUS DETAILS
                 </span>
                 <h1 className="text-xl md:text-2xl font-serif text-text-primary uppercase font-medium">
                   {selectedOrder.orderNumber}

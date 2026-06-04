@@ -6,7 +6,7 @@ export interface DrawerProps {
   isOpen: boolean;
   onClose: () => void;
   position?: "left" | "right";
-  title?: string;
+  title?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -51,9 +51,9 @@ export const Drawer: React.FC<DrawerProps> = ({
         {/* Drawer Header */}
         <div className="flex items-center justify-between p-space-md border-b border-border-subtle">
           {title ? (
-            <h2 className="text-base font-serif uppercase tracking-widest text-text-primary">
+            <div className="text-base font-serif uppercase tracking-widest text-text-primary flex items-center">
               {title}
-            </h2>
+            </div>
           ) : (
             <div />
           )}

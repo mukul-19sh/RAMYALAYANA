@@ -16,7 +16,7 @@ export const NewsletterForm: React.FC = () => {
     try {
       // Simulate newsletter subscribe endpoint
       const response = await new Promise<{ success: boolean; msg: string }>((resolve) =>
-        setTimeout(() => resolve({ success: true, msg: "Thank you for joining the RAMYA registry." }), 1000)
+        setTimeout(() => resolve({ success: true, msg: "Thank you for joining the RAMYALAYANA newsletter." }), 1000)
       );
 
       if (response.success) {
@@ -36,7 +36,7 @@ export const NewsletterForm: React.FC = () => {
   return (
     <div className="flex flex-col w-full font-sans max-w-md select-none">
       <h3 className="text-xs uppercase tracking-luxury text-text-primary mb-3">
-        THE RAMYA REGISTRY
+        THE RAMYALAYANA NEWSLETTER
       </h3>
       <p className="text-xs text-text-secondary font-light mb-4">
         Subscribe to receive notification of seasonal releases, artisan profiles, and private lookbooks.

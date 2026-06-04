@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { NewsletterForm } from "../ui/NewsletterForm";
 
 export const Footer: React.FC = () => {
@@ -61,16 +62,32 @@ export const Footer: React.FC = () => {
               </Link>
             </li>
             <li>
-              <span className="text-text-secondary">Support: care@ramya.in</span>
+              <span className="text-text-secondary">Support: care@ramyalayana.in</span>
             </li>
           </ul>
         </div>
       </div>
 
       {/* Trademark footer boundary */}
-      <div className="max-w-[1600px] mx-auto pt-8 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-4">
-        <span className="text-[10px] font-sans tracking-luxury uppercase text-text-secondary font-light text-center md:text-left">
-          © {new Date().getFullYear()} RAMYA. All Rights Reserved.
+      <div className="max-w-[1600px] mx-auto pt-8 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex items-center gap-2">
+          <Image
+            src="/icon.svg"
+            alt="RAMYALAYANA Icon"
+            width={18}
+            height={20}
+            className="object-contain"
+          />
+          <Image
+            src="/wordmark.svg"
+            alt="RAMYALAYANA Wordmark"
+            width={71}
+            height={10}
+            className="object-contain"
+          />
+        </div>
+        <span className="text-[10px] font-sans tracking-luxury uppercase text-text-secondary font-light text-center md:text-left md:flex-1">
+          © {new Date().getFullYear()} RAMYALAYANA. All Rights Reserved.
         </span>
         <span className="text-[10px] font-sans tracking-luxury uppercase text-text-secondary font-light text-center md:text-right">
           Atelier Bengaluru, Karnataka, India.

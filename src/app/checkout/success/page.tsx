@@ -71,7 +71,7 @@ function OrderSuccessContent() {
     return (
       <div className="min-h-screen bg-canvas-bg text-text-primary font-sans flex items-center justify-center select-none">
         <span className="text-xs uppercase tracking-luxury text-text-secondary animate-pulse">
-          Validating Order Registry...
+          Validating Order Details...
         </span>
       </div>
     );
@@ -120,8 +120,23 @@ function OrderSuccessContent() {
     <div className="min-h-screen bg-canvas-bg text-text-primary font-sans flex flex-col">
       {/* Securing Header */}
       <header className="border-b border-border-subtle h-16 flex items-center justify-between px-4 md:px-8 select-none">
-        <Link href="/" className="text-xl font-serif tracking-widest uppercase font-semibold">
-          RAMYA
+        <Link href="/" className="hover:opacity-80 transition-opacity flex items-center gap-2">
+          <Image
+            src="/icon.svg"
+            alt="RAMYALAYANA Icon"
+            width={25}
+            height={28}
+            priority
+            className="object-contain"
+          />
+          <Image
+            src="/wordmark.svg"
+            alt="RAMYALAYANA Wordmark"
+            width={99}
+            height={14}
+            priority
+            className="object-contain"
+          />
         </Link>
       </header>
 
@@ -250,7 +265,7 @@ export default function OrderSuccessPage() {
     <Suspense fallback={
       <div className="min-h-screen bg-canvas-bg text-text-primary font-sans flex items-center justify-center select-none">
         <span className="text-xs uppercase tracking-luxury text-text-secondary animate-pulse">
-          Validating Order Registry...
+          Validating Order Details...
         </span>
       </div>
     }>

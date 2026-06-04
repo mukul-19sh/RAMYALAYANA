@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 
+import Image from "next/image";
+
 export interface CheckoutLayoutProps {
   formNode: React.ReactNode; // Left side inputs
   summaryNode: React.ReactNode; // Right side order summary
@@ -13,8 +15,23 @@ export const CheckoutLayout: React.FC<CheckoutLayoutProps> = ({ formNode, summar
     <div className="min-h-screen bg-canvas-bg text-text-primary antialiased font-sans flex flex-col">
       {/* Secure Header */}
       <header className="border-b border-border-subtle h-16 flex items-center justify-between px-4 md:px-8 select-none">
-        <Link href="/" className="text-xl font-serif tracking-widest uppercase font-semibold">
-          RAMYA
+        <Link href="/" className="hover:opacity-80 transition-opacity flex items-center gap-2">
+          <Image
+            src="/icon.svg"
+            alt="RAMYALAYANA Icon"
+            width={25}
+            height={28}
+            priority
+            className="object-contain"
+          />
+          <Image
+            src="/wordmark.svg"
+            alt="RAMYALAYANA Wordmark"
+            width={99}
+            height={14}
+            priority
+            className="object-contain"
+          />
         </Link>
         <div className="flex items-center gap-2 text-text-secondary text-xs uppercase tracking-wider font-light">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -291,7 +291,7 @@ export default function CheckoutPage() {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_key", // Fallback to standard sandbox key
         amount: Math.round(amount * 100),
         currency: "INR",
-        name: "RAMYA",
+        name: "RAMYALAYANA",
         description: "Bespoke Handloom Order Checkout",
         order_id: razorpayOrderId,
         prefill: {
@@ -370,7 +370,7 @@ export default function CheckoutPage() {
       <div className="min-h-screen bg-canvas-bg text-text-primary antialiased font-sans flex flex-col justify-between">
         <header className="border-b border-border-subtle h-16 flex items-center px-4 md:px-8 select-none">
           <Link href="/" className="text-xl font-serif tracking-widest uppercase font-semibold">
-            RAMYA
+            RAMYALAYANA
           </Link>
         </header>
         <main className="flex-1 flex flex-col items-center justify-center p-8 select-none">

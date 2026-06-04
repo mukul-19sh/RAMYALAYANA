@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/store/useCart";
 import { MegaMenu } from "./MegaMenu";
 import { SearchOverlay } from "./SearchOverlay";
@@ -43,12 +44,27 @@ export const DesktopHeader: React.FC = () => {
         </nav>
 
         {/* Center: Brand Logo */}
-        <div className="absolute left-1/2 -translate-x-1/2">
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
           <Link
             href="/"
-            className="text-2xl font-serif tracking-widest text-text-primary hover:opacity-80 transition-opacity uppercase font-semibold"
+            className="hover:opacity-80 transition-opacity flex items-center justify-center gap-3 select-none"
           >
-            RAMYA
+            <Image
+              src="/icon.svg"
+              alt="RAMYALAYANA Icon"
+              width={35}
+              height={38}
+              priority
+              className="object-contain"
+            />
+            <Image
+              src="/wordmark.svg"
+              alt="RAMYALAYANA Wordmark"
+              width={142}
+              height={20}
+              priority
+              className="object-contain"
+            />
           </Link>
         </div>
 
