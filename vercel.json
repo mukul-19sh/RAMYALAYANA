@@ -2,18 +2,15 @@
   "crons": [
     {
       "path": "/api/admin/analytics/aggregate",
-      "schedule": "5 0 * * *",
-      "_comment": "Daily aggregation: runs at 00:05 UTC every day, aggregates yesterday's CheckoutEvents. Body is not configurable via Vercel cron — route defaults to yesterday + all periods."
+      "schedule": "5 0 * * *"
     },
     {
       "path": "/api/admin/analytics/aggregate",
-      "schedule": "10 0 * * 1",
-      "_comment": "Weekly aggregation: runs at 00:10 UTC every Monday, aggregates last week."
+      "schedule": "10 0 * * 1"
     },
     {
       "path": "/api/admin/analytics/aggregate",
-      "schedule": "15 0 1 * *",
-      "_comment": "Monthly aggregation: runs at 00:15 UTC on the 1st of each month, aggregates last month."
+      "schedule": "15 0 1 * *"
     }
   ]
 }
