@@ -173,9 +173,10 @@ export const auth = ((...args: any[]) => {
   // If the first argument is a function, it means it's being used as Next.js middleware: export default auth(req => { ... })
   if (args.length > 0 && typeof args[0] === "function") {
     return nextAuth(async (req) => {
-      // In middleware, we can check mock cookies
-      const mockAdmin = req.cookies.get("mock-admin")?.value === "true";
-      const mockSession = req.cookies.get("mock-session")?.value === "true";
+      // In middleware, we can check mock cookies (only in non-production environments)
+      const isDev = process.env.NODE_ENV !== "production";
+      const mockAdmin = isDev && req.cookies.get("mock-admin")?.value === "true";
+      const mockSession = isDev && req.cookies.get("mock-session")?.value === "true";
       
       if (mockAdmin) {
         // Mock the req.auth object
@@ -218,9 +219,10 @@ export const auth = ((...args: any[]) => {
   // We must return a promise because it's typically awaited.
   return (async () => {
     try {
+      const isDev = process.env.NODE_ENV !== "production";
       const { cookies } = await import("next/headers");
       const cookieStore = await cookies();
-      if (cookieStore.get("mock-admin")?.value === "true") {
+      if (isDev && cookieStore.get("mock-admin")?.value === "true") {
         return {
           user: {
             id: "60c72b2f9b1d8e1f40000098",
@@ -235,7 +237,7 @@ export const auth = ((...args: any[]) => {
           expires: new Date(Date.now() + 3600000).toISOString(),
         };
       }
-      if (cookieStore.get("mock-session")?.value === "true") {
+      if (isDev && cookieStore.get("mock-session")?.value === "true") {
         return {
           user: {
             id: "60c72b2f9b1d8e1f40000099",

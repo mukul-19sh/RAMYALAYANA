@@ -6,7 +6,8 @@ const originalGET = handlers.GET;
 export async function GET(request: NextRequest, context: any) {
   const url = new URL(request.url);
   if (url.pathname.endsWith("/api/auth/session")) {
-    const hasMockCookie = request.cookies.get("mock-session")?.value === "true";
+    const isDev = process.env.NODE_ENV !== "production";
+    const hasMockCookie = isDev && request.cookies.get("mock-session")?.value === "true";
     if (hasMockCookie) {
       return NextResponse.json({
         user: {
